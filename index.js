@@ -37,9 +37,21 @@ const getDogPic = async () => {
     console.log('Something went wrong with this errir message ', err);
     throw err;
   }
-  return '2: READY :(';
+  return '2: READY :D';
 };
 
+(async () => {
+  try {
+    console.log('1: Get dog pic');
+    const x = await getDogPic();
+    console.log(x);
+    console.log('3: Done, getting dog pic');
+  } catch (err) {
+    console.log('ERROR ....!!! ', err);
+  }
+})();
+
+/*
 console.log('1: Get dog pic');
 getDogPic()
   .then((x) => {
@@ -49,3 +61,4 @@ getDogPic()
   .catch((err) => {
     console.log('ERROR ....!!! ', err);
   });
+*/
