@@ -35,7 +35,17 @@ const getDogPic = async () => {
     console.log('Random image saved to the file !!!!');
   } catch (err) {
     console.log('Something went wrong with this errir message ', err);
+    throw err;
   }
+  return '2: READY :(';
 };
 
-getDogPic();
+console.log('1: Get dog pic');
+getDogPic()
+  .then((x) => {
+    console.log(x);
+    console.log('2: Done, getting dog pic');
+  })
+  .catch((err) => {
+    console.log('ERROR ....!!! ', err);
+  });
