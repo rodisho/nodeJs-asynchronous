@@ -39,23 +39,3 @@ const getDogPic = async () => {
 };
 
 getDogPic();
-
-/*
-readFilePro(`${__dirname}/dog.txt`)
-  .then((data) => {
-    console.log(`Breed: ${data}`);
-
-    return superagent.get(`https://dog.ceo/api/breed/${data}/images/random`);
-  })
-  .then((res) => {
-    console.log(res.body.message);
-
-    return writeFilePro('dog-img.txt', res.body.message);
-  })
-  .then(() => {
-    console.log('Random image saved to the file');
-  })
-  .catch((err) => {
-    console.log(err.message);
-  });
-*/
